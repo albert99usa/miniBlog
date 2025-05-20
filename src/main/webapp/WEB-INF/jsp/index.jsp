@@ -67,7 +67,7 @@
                                                                 </c:forEach>
                                                             </li>
                                                         </c:if>--%>
-                                                        <li class="item">${topic.visitCount}次阅读</li>
+                                                        <li class="item">${topic.visitCount}次閱讀</li>
                                                     </ul>
                                                 </div>
                                                 <div class="title-row">
