@@ -16,18 +16,18 @@ public class DateUtils {
     static final int SECONDS_IN_A_MINUTE=60;
 
     static final String TXT_YEAR_AGAO="年前";
-    static final String TXT_MONTH_AGAO="个月前";
+    static final String TXT_MONTH_AGAO="個月前";
     static final String TXT_WEEK_AGAO="周前";
     static final String TXT_DAY_AGAO="天前";
     static final String TXT_HOUR_AGAO="小时前";
-    static final String TXT_MINUTE_AGAO="分钟前";
-    static final String TXT_JUST_NOW="刚刚";
+    static final String TXT_MINUTE_AGAO="分鐘前";
+    static final String TXT_JUST_NOW="剛剛";
 
     public static final String NORMAL_FORMAT="yyyy-MM-dd HH:mm:ss";
 
 
     /**
-     * 获取指定时间离当前时间相差多少分，小时，天，周，月，年
+     * 獲取指定时间离當前时间相差多少分，小时，天，周，月，年
      * @param d
      * @return
      */

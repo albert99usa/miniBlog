@@ -10,7 +10,7 @@ public interface UserService {
      User findByEmail(String email);
 
     /**
-     * 创建用户
+     * 創建用户
      * @param vo
      * @return
      */
@@ -18,14 +18,14 @@ public interface UserService {
 
 
     /**
-     * 获取用户
+     * 獲取用户
      * @param uid
      * @return
      */
     User getUser(Long uid);
 
     /**
-     * 根据用户名和密码查找用户
+     * 根据用户名和密碼查找用户
      * @param username
      * @param password
      * @return
@@ -49,7 +49,7 @@ public interface UserService {
     User findByUsername(String username);
 
     /**
-     * 使用邮箱查找用户
+     * 使用 郵箱查找用户
      * @param email
      * @return
      */
@@ -64,7 +64,7 @@ public interface UserService {
 
 
     /**
-     * 修改用户密码
+     * 修改用户密碼
      * @param userId
      * @param newPwd
      * @return
@@ -72,10 +72,10 @@ public interface UserService {
     User updatePwd(Long userId, String newPwd);
 
     /**
-     * 更新头像
+     * 更新頭像
      * @param userId
      * @param avatarURL
-     * @param isUploaded 是否通过上传更新的头像图片
+     * @param isUploaded 是否通过上傳更新的頭像圖片
      * @return
      */
     User updateAvatar(Long userId, String avatarURL, boolean isUploaded);

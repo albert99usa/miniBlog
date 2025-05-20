@@ -73,16 +73,16 @@ public class RssController {
     }
 
     /**
-     * 构建RSS文件头信息
+     * 建構RSS文件头信息
      * @return
      */
     private Channel buildChannelMeta(String serverURL){
         Channel channel = new Channel(RSS_CHANNEL_TYPE);
-        channel.setTitle("tBlog:个人博客系统");
-        channel.setDescription("简单，轻巧的博客系统");
+        channel.setTitle("miniBlog:個人部落格系统");
+        channel.setDescription("简单，轻巧的部落格系统");
         channel.setLink(serverURL);
         channel.setEncoding("utf-8");
-        channel.setLanguage("zh-cn");
+        channel.setLanguage("zh-tw");
         channel.setPubDate(new Date());
         return channel;
     }

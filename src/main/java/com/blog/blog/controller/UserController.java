@@ -39,7 +39,7 @@ public class UserController {
     private UserService userService;
 
     /**
-     * 用户主页
+     * 用户主頁
      * @param username
      * @param model
      * @return
@@ -53,7 +53,7 @@ public class UserController {
 
 
     /**
-     * 更新用户资料
+     * 更新用户資料
      * @param user
      * @param model
      * @return
@@ -72,7 +72,7 @@ public class UserController {
 
 
     /**
-     * 跳转到修改密码页面
+     * 跳转到修改密碼頁面
      * @param model
      * @return
      */
@@ -92,27 +92,27 @@ public class UserController {
            return "user/user_pwd";
        }
        if(!vo.getNewPwd().equals(vo.getRepeatNewPwd())){
-           result.rejectValue("repeatNewPwd",null,"两次输入密码不一致");
+           result.rejectValue("repeatNewPwd",null,"两次输入密碼不一致");
            return "user/user_pwd";
        }
        if(userService.isUserValid(vo.getUsername(),vo.getOldPwd())){
            User updatedUser=userService.updatePwd(vo.getUid(),vo.getNewPwd());
            if(null!=updatedUser&&updatedUser.getId()!=null){
-               redirectAttributes.addFlashAttribute("messageSuc","密码修改成功");
+               redirectAttributes.addFlashAttribute("messageSuc","密碼修改成功");
                return "redirect:/user/changePwd";
            }else{
-               model.addAttribute("messageErr","密码修改失败");
+               model.addAttribute("messageErr","密碼修改失败");
                return "user/user_pwd";
            }
        }else{
-           model.addAttribute("messageErr","原始密码错误");
+           model.addAttribute("messageErr","原始密碼錯誤");
            return "user/user_pwd";
        }
    }
 
 
     /**
-     * 修改头像页面
+     * 修改頭像頁面
      * @return
      */
     @RequestMapping(value = "/changeAvatar",method = RequestMethod.GET)
@@ -128,32 +128,32 @@ public class UserController {
                                  RedirectAttributes redirectAttributes){
 
         if(null==file||file.isEmpty()){
-            model.addAttribute("messageErr","头像文件不能为空！");
+            model.addAttribute("messageErr","頭像文件不能為空！");
             return "user/user_avatar";
         }
 
         try {
             String newFilename = UploadUtil.getNewFilename(file.getOriginalFilename());
             String absolutePath = UploadUtil.uploadImage(uploadFilesFolder,newFilename, file.getInputStream());
-            logger.info("头像保存成功，全路径为："+absolutePath);
+            logger.info("頭像保存成功，全路径為："+absolutePath);
             User user=userService.updateAvatar(uid,newFilename,Boolean.TRUE);
             if(null!=user&&user.getId()!=null){
                 session.setAttribute(CommonProps.LOGIN_USER_SESSION_KEY,user);
-                redirectAttributes.addFlashAttribute("messageSuc","头像修改成功");
+                redirectAttributes.addFlashAttribute("messageSuc","頭像修改成功");
                 return "redirect:/user/changeAvatar";
             }else{
-                model.addAttribute("messageErr","头像修改失败");
+                model.addAttribute("messageErr","頭像修改失败");
                 return "user/user_avatar";
             }
         } catch (IOException e) {
             logger.error("change avatar error",e);
-            model.addAttribute("messageErr","修改头像时出错了");
+            model.addAttribute("messageErr","修改頭像时出错了");
             return "user/user_avatar";
         }
     }
 
     /**
-     * 使用Avatar头像
+     * 使用Avatar頭像
      * @param username
      * @param session
      * @param model
@@ -169,16 +169,16 @@ public class UserController {
 
         User user=userService.findByUsername(username);
         if(null==user){
-            model.addAttribute("messageErr","无法获取用户信息");
+            model.addAttribute("messageErr","無法獲取用户信息");
             return "user/user_avatar";
         }
         User updatedUser= userService.updateAvatar(user.getId(), GravatarUtils.makeGravatar(email),Boolean.FALSE);
         if(null!=updatedUser&&updatedUser.getId()!=null){
             session.setAttribute(CommonProps.LOGIN_USER_SESSION_KEY,updatedUser);
-            redirectAttributes.addFlashAttribute("messageSuc","获取Avatar头像成功");
+            redirectAttributes.addFlashAttribute("messageSuc","獲取Avatar頭像成功");
             return "redirect:/user/changeAvatar";
         }else{
-            model.addAttribute("messageErr","获取Avatar头像失败");
+            model.addAttribute("messageErr","獲取Avatar頭像失败");
             return "user/user_avatar";
         }
 

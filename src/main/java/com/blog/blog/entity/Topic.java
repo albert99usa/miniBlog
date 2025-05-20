@@ -48,7 +48,7 @@ public class Topic extends BaseModel {
     private String authorName;
 
     /**
-     * 置顶帖
+     * 置頂帖
      */
     @Column
     private boolean top=false;

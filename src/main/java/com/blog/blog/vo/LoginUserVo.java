@@ -11,12 +11,12 @@ import lombok.Setter;
 @Setter
 public class LoginUserVo {
 
-    @NotEmpty(message = "用户名不能为空")
+    @NotEmpty(message = "用户名不能為空")
     private String username;
 
-    @NotEmpty(message = "密码不能为空")
+    @NotEmpty(message = "密碼不能為空")
     private String password;
 
-    @NotEmpty(message = "验证码不能为空")
+    @NotEmpty(message = "驗證碼不能為空")
     private String validateCode;
 }

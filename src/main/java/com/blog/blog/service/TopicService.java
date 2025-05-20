@@ -14,7 +14,7 @@ import java.util.List;
 public interface TopicService {
 
     /**
-     * 分页查找
+     * 分頁查找
      * @param pageNo
      * @param pageSize
      * @return
@@ -22,7 +22,7 @@ public interface TopicService {
     Page<Topic> findByPage(int pageNo, int pageSize);
 
     /**
-     * 指定用户帖子
+     * 指定用户文章
      * @param userId
      * @param pageNo
      * @param pageSize
@@ -31,7 +31,7 @@ public interface TopicService {
     Page<Topic> findByUserIdAndPage(Long userId, int pageNo, int pageSize);
 
     /**
-     * 指定用户创建的帖子
+     * 指定用户創建的文章
      * @param username
      * @param pageNo
      * @param pageSize
@@ -40,7 +40,7 @@ public interface TopicService {
     Page<Topic> findByUsernameAndPage(String username, int pageNo, int pageSize);
 
     /**
-     * 含有指定标签的帖子
+     * 含有指定標籤的文章
      * @param tagName
      * @param pageNo
      * @param pageSize
@@ -49,7 +49,7 @@ public interface TopicService {
     Page<Topic> findByTagAndPage(String tagName, int pageNo, int pageSize);
 
     /**
-     * 首页分页查找
+     * 首頁分頁查找
      * @param vo
      * @return
      */
@@ -57,7 +57,7 @@ public interface TopicService {
 
 
     /**
-     * 关键字分页查找
+     * 关键字分頁查找
      * @param searchVo
      * @return
      */
@@ -65,7 +65,7 @@ public interface TopicService {
 
 
     /**
-     * 新增帖子
+     * 新增文章
      * @param vo
      * @return
      */
@@ -73,7 +73,7 @@ public interface TopicService {
 
 
     /**
-     * 查找指定帖子
+     * 查找指定文章
      * @param topicId
      * @return
      */
@@ -81,7 +81,7 @@ public interface TopicService {
 
 
     /**
-     * 查找指定帖子,并转换成vo类
+     * 查找指定文章,并转换成vo類
      * @param topicId
      * @return
      */
@@ -89,7 +89,7 @@ public interface TopicService {
 
 
     /**
-     * 更新帖子信息
+     * 更新文章信息
      * @param vo
      * @param id
      * @return
@@ -98,7 +98,7 @@ public interface TopicService {
 
 
     /**
-     * 删除帖子
+     * 删除文章
      * @param topicId
      */
     void deleteById(Long topicId);
@@ -110,13 +110,13 @@ public interface TopicService {
     void increaseVisitCount(Long topicId);
 
     /**
-     * 更新评论次数
+     * 更新評論次数
      * @param topicId
      */
     void increaseReplyCount(Long topicId);
 
     /**
-     * 减少评论次数
+     * 减少評論次数
      * @param topicId
      */
     void decreaseReplyCount(Long topicId);
@@ -166,7 +166,7 @@ public interface TopicService {
     Page<Topic> findCollectedTopicsByUidAndPage(Long userId, int pageNo, int pageSize);
 
     /**
-     * 查找所有帖子
+     * 查找所有文章
      * @return
      */
     List<Topic> findAll();

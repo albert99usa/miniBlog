@@ -3,8 +3,8 @@
    <div class="container main">
     <div class="col-md-9">
         <ul class='breadcrumb'>
-            <li><a href='${contextPath}/'>主页</a><span class='divider'></span></li>
-            <li class='active'>关于</li>
+            <li><a href='${contextPath}/'>主頁</a><span class='divider'></span></li>
+            <li class='active'>關於</li>
         </ul>
         <div class='panel'>
             <div class='inner'>

@@ -6,7 +6,7 @@
 <div class='container main'>
     <div class='col-md-9' id="content">
         <ul class='breadcrumb'>
-            <li><a href='${contextPath}/'><i class="glyphicon glyphicon-home"></i>主页</a><span class='divider'></span></li>
+            <li><a href='${contextPath}/'><i class="glyphicon glyphicon-home"></i>主頁</a><span class='divider'></span></li>
             <li><a href='${contextPath}/?tab=${article.topic.catDir}'>${article.topic.catName}</a><span class='divider'></span></li>
         </ul>
         <div class='panel'>
@@ -15,7 +15,7 @@
                 <div class="changes">
                     <span>${article.topic.friendlyTime}</span><span>&nbsp;&nbsp;作者：<a href="${contextPath}/pub/user/${article.topic.authorId}">${article.topic.authorName}</a></span><span>&nbsp;&nbsp; ${article.topic.visitCount}次浏览</span>
                     <span class="share pull-right">
-                        <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+                        <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人網"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
                         <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
                     </span>
                 </div>
@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="topic-tags">
-                 <%--   <span>标签：</span>
+                 <%--   <span>標籤：</span>
                     <c:if test="${not empty article.topic.tags}">
                         <c:forEach items="${article.topic.tags}" var="tag">
                             <a href="${contextPath}/tag/${tag}" class="tag">${tag}</a>
@@ -52,7 +52,7 @@
                         </c:choose>
                         <a href="#reply" class="action-link">
                             <img src="${contextPath}/static/images/ico/comment-lg.svg" alt="">
-                            <span>评论</span>
+                            <span>評論</span>
                         </a>
                         <c:choose>
                             <c:when test="${article.topic.collectedUsers.contains(loginUser.id)}">
@@ -77,7 +77,7 @@
         <c:if test="${not empty article.replyList}">
             <div class="panel" id="comment">
                 <div class="header">
-                    <span class="col_fade">${article.topic.replyCount} 回复</span>
+                    <span class="col_fade">${article.topic.replyCount} 回覆</span>
                 </div>
                 <c:forEach items="${article.replyList}" var="reply" varStatus="status">
                     <div class="cell reply_area reply_item editormd-preview-container" reply_id="${reply.id}" reply_to_id="" id="${reply.id}">
@@ -122,7 +122,7 @@
                 <form action="${contextPath}/reply/add/${article.topic.id}" method="post" class="form-vertical" id="reply-form" role="form">
                     <fieldset>
                         <div class="form-group">
-                            <label>新回复</label>
+                            <label>新回覆</label>
                             <div id="editormd">
                                 <textarea class="editormd-markdown-textarea" name="contentMD" id="contentMD"></textarea>
                                 <textarea class="editormd-html-textarea" name="contentHTML" id="contentHTML"></textarea>
@@ -132,7 +132,7 @@
                         <input type="hidden" name="authorId" value="${loginUser.id}">
                         <input type="hidden" name="authorName" value="${loginUser.username}">
                         <input type="hidden" name="authorAvatar" value="${loginUser.avatarURL}">
-                        <input type="submit" class="btn btn-primary" value="回复" id="submit">
+                        <input type="submit" class="btn btn-primary" value="回覆" id="submit">
                     </fieldset>
                 </form>
             </div>
@@ -142,7 +142,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                            <h4 class="modal-title" id="myModalLabel">编辑评论</h4>
+                            <h4 class="modal-title" id="myModalLabel">编辑評論</h4>
                         </div>
                         <div class="modal-body">
                             <form action="" method="post" class="form-vertical" id="edit-comment-form" role="form">
@@ -160,7 +160,7 @@
         </c:if>
         <c:if test="${empty loginUser}">
             <div class="content" style="padding: 2em;">
-                需要 <a href="${contextPath}/login" class="btn btn-primary">登录</a> 后方可回复, 如果你还没有账号你可以 <a href="${contextPath}/register" class="btn btn-danger">注册</a> 一个帐号。
+                需要 <a href="${contextPath}/login" class="btn btn-primary">登錄</a> 後方可回覆, 如果你還没有帳號你可以 <a href="${contextPath}/register" class="btn btn-danger">註冊</a> 一個帐号。
             </div>
         </c:if>
     </div>
@@ -201,7 +201,7 @@
     });
 
     /**
-     * 创建Markdown编辑器封装方法
+     * 創建Markdown编辑器封装方法
      * @param divId
      * @param submitId
      * @param markdown
@@ -222,7 +222,7 @@
             sequenceDiagram  : true,
             autoFocus: false,
             path: "${contextPath}/static/js/editormd/lib/",
-            placeholder: "Markdown，提交前请查看预览格式是否正确",
+            placeholder: "Markdown，提交前请查看預覽格式是否正确",
             saveHTMLToTextarea: true,
             imageUpload: true,
             imageFormats: ["jpg", "jpeg", "gif", "png"],

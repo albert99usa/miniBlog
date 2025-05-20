@@ -15,7 +15,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import java.util.Date;
 
 /**
- * 栏目控制器
+ * 分類控制器
  * @author tangzhiqiang
  */
 @Controller
@@ -27,7 +27,7 @@ public class CategoryController {
 
 
     /**
-     * 栏目列表
+     * 分類列表
      * @param model
      * @return
      */
@@ -39,7 +39,7 @@ public class CategoryController {
 
 
     /**
-     * 新增栏目表单
+     * 新增分類表單
      * @return
      */
     @RequestMapping(value="/create",method = RequestMethod.GET)
@@ -48,7 +48,7 @@ public class CategoryController {
     }
 
     /**
-     * 新增栏目
+     * 新增分類
      * @param cat
      * @param model
      * @param redirectAttributes
@@ -59,13 +59,13 @@ public class CategoryController {
                                    ModelMap model,
                                    RedirectAttributes redirectAttributes){
         if(null==cat||StringUtils.isEmpty(cat.getCatName())||StringUtils.isEmpty(cat.getCatDir())){
-            model.addAttribute("messageErr","栏目名称和目录名不能为空");
+            model.addAttribute("messageErr","分類名稱和目錄名不能為空");
             model.addAttribute("cat",cat);
             return "category/cat_add";
         }
 
         if(categoryService.isCategoryExisted(cat.getCatDir())){
-            model.addAttribute("messageErr","目录名已经存在,请换成其他的");
+            model.addAttribute("messageErr","目錄名已經存在,请换成其他的");
             model.addAttribute("cat",cat);
             return "category/cat_add";
         }
@@ -74,10 +74,10 @@ public class CategoryController {
         cat.setUpdateAt(new Date());
         Category savedCat=categoryService.addCategory(cat);
         if(null!=savedCat&&savedCat.getId()!=null){
-            redirectAttributes.addFlashAttribute("messageSuc","创建栏目成功");
+            redirectAttributes.addFlashAttribute("messageSuc","創建分類成功");
             return "redirect:/cat/list";
         }else{
-            redirectAttributes.addFlashAttribute("messageErr","栏目创建失败");
+            redirectAttributes.addFlashAttribute("messageErr","分類創建失败");
             model.addAttribute("cat",cat);
             return "category/cat_add";
         }
@@ -85,7 +85,7 @@ public class CategoryController {
 
 
     /**
-     * 修改栏目表单
+     * 修改分類表單
      * @param catID
      * @param model
      * @return
@@ -98,7 +98,7 @@ public class CategoryController {
 
 
     /**
-     * 修改栏目
+     * 修改分類
      * @param cat
      * @param model
      * @param redirectAttributes
@@ -109,7 +109,7 @@ public class CategoryController {
                                  ModelMap model,
                                  RedirectAttributes redirectAttributes){
         if(null==cat||StringUtils.isEmpty(cat.getCatName())||StringUtils.isEmpty(cat.getCatDir())){
-            model.addAttribute("messageErr","栏目名称和目录名不能为空");
+            model.addAttribute("messageErr","分類名稱和目錄名不能為空");
             model.addAttribute("cat",cat);
             return "category/cat_edit";
         }
@@ -117,10 +117,10 @@ public class CategoryController {
         cat.setUpdateAt(new Date());
         Category savedCat=categoryService.updateById(cat,catID);
         if(null!=savedCat&&savedCat.getId()!=null){
-            redirectAttributes.addFlashAttribute("messageSuc","更新栏目成功");
+            redirectAttributes.addFlashAttribute("messageSuc","更新分類成功");
             return "redirect:/cat/list";
         }else{
-            redirectAttributes.addFlashAttribute("messageErr","栏目更新失败");
+            redirectAttributes.addFlashAttribute("messageErr","分類更新失败");
             model.addAttribute("cat",cat);
             return "category/cat_edit";
         }

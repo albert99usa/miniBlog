@@ -25,6 +25,6 @@ public class ApiController {
         if(null!=catList){
             return Result.ok(catList);
         }
-        return Result.fail("获取数据失败");
+        return Result.fail("獲取分類資料失败");
     }
 }

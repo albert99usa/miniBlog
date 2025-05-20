@@ -14,17 +14,17 @@ import lombok.Setter;
 @Setter
 public class RegisterUserVo {
 
-    @NotEmpty(message = "用户名不能为空")
+    @NotEmpty(message = "用户名不能為空")
     private String username;
 
-    @NotEmpty(message = "密码不能为空")
-    @Size(min = 6, max = 15, message = "密码必须在6到15个字符")
+    @NotEmpty(message = "密碼不能為空")
+    @Size(min = 6, max = 15, message = "密碼必须在6到15個字符")
     private String password;
 
-    @NotEmpty(message = "邮箱不能为空")
-    @Email(message = "邮箱格式不正确")
+    @NotEmpty(message = " 郵箱不能為空")
+    @Email(message = " 郵箱格式不正确")
     private String email;
 
-    @NotEmpty(message = "验证码不能为空")
+    @NotEmpty(message = "驗證碼不能為空")
     private String validateCode;
 }

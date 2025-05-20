@@ -2,7 +2,7 @@
 <div class='col-md-3'>
     <div class='panel'>
         <div class='header'>
-            <span class='col_fade'>关于</span>
+            <span class='col_fade'>關於</span>
         </div>
         <div class='inner'>
             <p>miniBlog：</p>

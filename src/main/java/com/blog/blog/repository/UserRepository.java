@@ -15,7 +15,7 @@ public interface UserRepository extends JpaRepository<User,Long> {
     User findByUsername(String username);
 
     /**
-     * 邮件查找用户
+     *  郵件查找用户
      *
      * @param email
      * @return
@@ -23,7 +23,7 @@ public interface UserRepository extends JpaRepository<User,Long> {
     User findByEmail(String email);
 
     /**
-     * 用户名就、密码查找
+     * 用户名就、密碼查找
      *
      * @param username
      * @param password

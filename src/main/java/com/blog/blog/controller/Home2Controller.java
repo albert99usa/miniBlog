@@ -32,7 +32,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 /**
- * 首页控制器
+ * 首頁控制器
  * @author tangzhiqiang
  */
 @Controller
@@ -58,8 +58,8 @@ public class Home2Controller {
 
 
     /**
-     * 跳转到首页
-     * @param vo 首页参数封装
+     * 跳转到首頁
+     * @param vo 首頁参数封装
      * @param modelMap
      * @return
      */
@@ -80,7 +80,7 @@ public class Home2Controller {
     }
 
     /**
-     * 注册页面
+     * 註冊頁面
      * @return
      */
   @RequestMapping(value = "/register",method = RequestMethod.GET)
@@ -91,7 +91,7 @@ public class Home2Controller {
 
 
     /**
-     * 用户登录
+     * 用户登錄
      * @return
      */
   @RequestMapping(value="/register",method = RequestMethod.POST)
@@ -107,14 +107,14 @@ public class Home2Controller {
         String vcodeInSession = (String) session.getAttribute(VCODE_SESSION_KEY);
         String submitCode = registerUser.getValidateCode();
         if (!StringUtils.equals(vcodeInSession,submitCode)) {
-            result.rejectValue("validateCode",null,"验证码错误!");
+            result.rejectValue("validateCode",null,"驗證碼錯誤!");
       }
 
         if(null!=userService.findByUsername(registerUser.getUsername())){
-            result.rejectValue("username",null,"该用户名已经存在");
+            result.rejectValue("username",null,"該用户名已經存在");
         }
         if(null!=userService.findUserByEmail(registerUser.getEmail())){
-            result.rejectValue("email",null,"该邮箱已经被注册");
+            result.rejectValue("email",null,"該 郵箱已經被註冊");
         }
         if(result.hasErrors()){
             return "register";
@@ -122,10 +122,10 @@ public class Home2Controller {
 
         User savedUser=userService.createUser(registerUser);
         if(null!=savedUser&&savedUser.getId()!=null){
-            redirectAttributes.addFlashAttribute("messageSuc","注册成功！");
+            redirectAttributes.addFlashAttribute("messageSuc","註冊成功！");
             return "redirect:/login";
         }else{
-            model.addAttribute("messageErr","注册失败");
+            model.addAttribute("messageErr","註冊失败");
             model.addAttribute("vo",registerUser);
             return "register";
         }
@@ -135,7 +135,7 @@ public class Home2Controller {
 
 
     /**
-     * 登陆页面
+     * 登錄頁面
      * @return
   /*   *//*
     @RequestMapping(value = "/login",method = RequestMethod.GET)
@@ -145,7 +145,7 @@ public class Home2Controller {
     }
 
     *//**
-     * 用户登录
+     * 用户登錄
      * @return
      *//*
     @RequestMapping(value="/login",method = RequestMethod.POST)
@@ -162,11 +162,11 @@ public class Home2Controller {
         String submitCode = user.getValidateCode();
 
         if (!StringUtils.equals(vcodeInSession,submitCode)) {
-            result.rejectValue("validateCode",null,"验证码错误!");
+            result.rejectValue("validateCode",null,"驗證碼錯誤!");
             return "login";
         }
       *//*  if(!userService.isUserValid(user.getUsername(),user.getPassword())){
-            model.addAttribute("messageErr","用户名或者密码错误");
+            model.addAttribute("messageErr","用户名或者密碼錯誤");
             return "login";
         }*//*
 
@@ -177,7 +177,7 @@ public class Home2Controller {
 */
 
     /**
-     * 生成验证码
+     * 生成驗證碼
      * @param request
      * @param response
      * @throws IOException
@@ -206,7 +206,7 @@ public class Home2Controller {
     }*/
 
     /**
-     * 关于页面
+     * 關於頁面
      * @return
      */
     @RequestMapping(value = "/about")

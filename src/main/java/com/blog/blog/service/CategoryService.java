@@ -11,7 +11,7 @@ import java.util.List;
 public interface CategoryService {
 
     /**
-     * 新增栏目
+     * 新增分類
      * @param cat
      * @return
      */
@@ -19,7 +19,7 @@ public interface CategoryService {
 
 
     /**
-     * 使用栏目ID找到栏目信息
+     * 使用分類ID找到分類信息
      * @param id
      * @return
      */
@@ -27,7 +27,7 @@ public interface CategoryService {
     Category findById(Long id);
 
     /**
-     * 分页查找
+     * 分頁查找
      * @param pageNo
      * @param pageSize
      * @return
@@ -35,13 +35,13 @@ public interface CategoryService {
     Page<Category> findByPage(int pageNo, int pageSize);
 
     /**
-     * 找到所有栏目信息
+     * 找到所有分類信息
      * @return
      */
     List<Category> findAll();
 
     /**
-     * 判断栏目是否已经存在
+     * 判断分類是否已經存在
      * @param catDir
      * @return
      */
@@ -49,7 +49,7 @@ public interface CategoryService {
 
 
     /**
-     * 更新栏目信息
+     * 更新分類信息
      * @param cat
      * @param id
      * @return
@@ -58,9 +58,9 @@ public interface CategoryService {
 
 
     /**
-     * 删除指定栏目
+     * 删除指定分類
      * @param id
-     * //TODO 删除栏目同时也要删除该栏目下文章
+     * //TODO 删除分類同时也要删除該分類下文章
      */
     void deleteCategory(Long id);
 }

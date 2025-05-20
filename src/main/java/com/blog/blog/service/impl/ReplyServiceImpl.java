@@ -36,7 +36,7 @@ public class ReplyServiceImpl implements ReplyService {
     public Reply addReply(ReplyVo vo) {
         Reply savedReply=replyRepository.save(convertVoToReply(vo));
         if(null!=savedReply&&savedReply.getId()!=null){
-            //更新帖子评论次数
+            //更新文章評論次数
             topicService.increaseReplyCount(savedReply.getTopicId());
             return savedReply;
         }

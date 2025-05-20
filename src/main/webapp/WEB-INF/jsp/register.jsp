@@ -5,15 +5,15 @@
 <div class='container main'>
     <div class='col-md-9'>
         <ul class='breadcrumb'>
-            <li><a href='${contextPath}/'>主页</a><span class='divider'></span></li>
-            <li class='active'>注册</li>
+            <li><a href='${contextPath}/'>主頁</a><span class='divider'></span></li>
+            <li class='active'>註冊</li>
         </ul>
         <div class="row wrapper">
             <div class="col-sm-3">&nbsp;</div>
             <div class="col-sm-6">
                 <jsp:include page="inc/msgbox.jsp"></jsp:include>
                 <form:form action="${contextPath}/register" modelAttribute="registerForm" method="post">
-                    <h3 class="form-signin-header text-center">用户注册</h3>
+                    <h3 class="form-signin-header text-center">用户註冊</h3>
                     <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-addon">用户名:</div>
@@ -30,14 +30,14 @@
                     </div>
                     <div class="form-group">
                         <div class="input-group">
-                            <div class="input-group-addon">邮&nbsp;&nbsp;&nbsp;&nbsp;件:</div>
-                            <form:input path="email"  cssClass="form-control" name="email" id="email" placeholder="电子邮件"/>
+                            <div class="input-group-addon"> 郵&nbsp;&nbsp;&nbsp;&nbsp;件:</div>
+                            <form:input path="email"  cssClass="form-control" name="email" id="email" placeholder="電子 郵件"/>
                         </div>
                         <form:errors path="email" cssClass="error"/>
                     </div>
                     <div class="form-group">
                         <div class="input-group">
-                            <div class="input-group-addon">验证码:</div>
+                            <div class="input-group-addon">驗證碼:</div>
                             <form:input path="validateCode" cssClass="form-control" cssStyle="display:inline-block;width:120px;margin-right:13px;" id="validateCode"/>
                             <img id="validateCodeImg" src="${contextPath}/validateCode"/>&nbsp;&nbsp;<a href="#" onclick="javascript:reloadValidateCode();">看不清？</a>
                         </div>
@@ -45,14 +45,14 @@
                     </div>
                     <div class="btn-group btn-group-justified" role="group" aria-label="...">
                         <div class="btn-group" role="group">
-                            <button class="btn btn-success" type="submit">注册</button>
+                            <button class="btn btn-success" type="submit">註冊</button>
                         </div>
                         <div class="btn-group" role="group">
                             <button class="btn btn-default" type="reset">重置</button>
                         </div>
                     </div>
                     <br>
-                    <p>已经有账户？点击<a href="${contextPath}/login">登陆</a></p>
+                    <p>已經有账户？点击<a href="${contextPath}/login">登錄</a></p>
                 </form:form>
             </div>
             <div class="com-sm-3">&nbsp;</div>

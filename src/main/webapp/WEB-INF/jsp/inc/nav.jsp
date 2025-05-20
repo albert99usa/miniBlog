@@ -22,22 +22,22 @@
     </div>
     <div class="navbar-collapse collapse pull-right">
         <ul class="nav navbar-nav">
-            <li><a href="${contextPath}/">首页</a></li>
-            <li><a href="${contextPath}/about">关于</a></li>
+            <li><a href="${contextPath}/">首頁</a></li>
+            <li><a href="${contextPath}/about">關於</a></li>
             <security:authorize access="!isAuthenticated()">
 <%--            <c:if test="${empty loginUser}">--%>
-                <li><a href="${contextPath}/register">注册</a></li>
-                <li><a href="${contextPath}/login">登陆</a></li>
+                <li><a href="${contextPath}/register">註冊</a></li>
+                <li><a href="${contextPath}/login">登錄</a></li>
 <%--            </c:if>--%>
             </security:authorize>
 <%--            <c:if test="${not empty loginUser}">--%>
                 <security:authorize access="isAuthenticated()">
 <%--                <c:if test="${loginUser.username=='admin'}">--%>
                     <security:authorize access="hasRole('ADMIN')">
-                 <li><a href="${contextPath}/cat/list">栏目管理</a></li>
+                 <li><a href="${contextPath}/cat/list">分類管理</a></li>
 
 <%--                </c:if>--%>
-                <li><a href="${contextPath}/topic/list">帖子管理</a></li>
+                <li><a href="${contextPath}/topic/list">文章管理</a></li>
                     </security:authorize>
                 <li class="dropdown">
                     <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">${loginUser.username}<b class="caret"></b></a>

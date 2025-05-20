@@ -10,7 +10,7 @@ public class CommonProps {
     public static final String ADMIN_EMAIL="admin@test.com";
 
     /**
-     * 已登录用户保存保存到session中的使用的key名称
+     * 已登錄用户保存保存到session中的使用的key名稱
      */
     public static final String LOGIN_USER_SESSION_KEY="loginUser";
 

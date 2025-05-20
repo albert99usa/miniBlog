@@ -6,22 +6,22 @@
 <div class='container main'>
     <div class='col-md-9'>
         <ul class='breadcrumb'>
-            <li><a href='${contextPath}/'>主页</a><span class='divider'></span></li>
-            <li><a href='${contextPath}/topic/list'>帖子管理</a><span class='divider'></span></li>
-            <li class='active'>更新帖子</li>
+            <li><a href='${contextPath}/'>主頁</a><span class='divider'></span></li>
+            <li><a href='${contextPath}/topic/list'>文章管理</a><span class='divider'></span></li>
+            <li class='active'>更新文章</li>
         </ul>
         <div class='panel'>
             <div class='inner'>
                 <div class="topic_content">
                     <div class="markdown-text">
-                        <h3>修改帖子</h3>
+                        <h3>修改文章</h3>
                         <div class="row">
                             <jsp:include page="../inc/msgbox.jsp"></jsp:include>
                             <form method="post" action="${contextPath}/topic/edit/${topicVo.topicId}">
                                 <input type="hidden" name="thumbURL" id="thumbURL" value="${topicVo.thumbURL}">
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <div class="input-group-addon">栏目:</div>
+                                        <div class="input-group-addon">分類:</div>
                                         <select id="catId" name="catId" class="form-control">
                                             <option value="" selected=""></option>
                                             <c:forEach items="${catList}" var="cat">
@@ -33,8 +33,8 @@
 
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <div class="input-group-addon">标题:</div>
-                                        <input type="text" name="title" class="form-control" placeholder="输入帖子标题" value="${topicVo.title}">
+                                        <div class="input-group-addon">標題:</div>
+                                        <input type="text" name="title" class="form-control" placeholder="输入文章標題" value="${topicVo.title}">
                                     </div>
                                 </div>
 
@@ -47,16 +47,16 @@
 
                                 <div class="form-group">
                                     <div class="input-group">
-                                        <div class="input-group-addon">标签:</div>
-                                        <input type="text" name="tags" class="form-control" placeholder="输入标签" value="${topicVo.tags}">
+                                        <div class="input-group-addon">標籤:</div>
+                                        <input type="text" name="tags" class="form-control" placeholder="输入標籤" value="${topicVo.tags}">
                                     </div>
-                                    <span class="label-info">注意：标签使用英文逗号分隔</span>
+                                    <span class="label-info">注意：標籤使用英文逗号分隔</span>
                                 </div>
 
                                 <div class="form-group">
                                     <%--<div class="input-group">--%>
                                         <%--<div class="input-group-addon">内容:</div>--%>
-                                        <%--<textarea name="content" class="form-control" rows="12" placeholder="请输入帖子内容">${topicVo.content}</textarea>--%>
+                                        <%--<textarea name="content" class="form-control" rows="12" placeholder="请输入文章内容">${topicVo.content}</textarea>--%>
                                     <%--</div>--%>
                                         <div id="editormd">
                                             <textarea class="editormd-markdown-textarea" name="contentMD" id="contentMD">${topicVo.contentMD}</textarea>
@@ -65,10 +65,10 @@
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox" name="contentIsHTML" <c:if test="${topicVo.contentIsHTML==true}">checked</c:if> value="true"> 是否网页？
+                                        <input type="checkbox" name="contentIsHTML" <c:if test="${topicVo.contentIsHTML==true}">checked</c:if> value="true"> 是否網頁？
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="top" <c:if test="${topicVo.top==true}">checked</c:if> value="true"> 置顶帖？
+                                        <input type="checkbox" name="top" <c:if test="${topicVo.top==true}">checked</c:if> value="true"> 置頂帖？
                                     </label>
                                     <label>
                                         <input type="checkbox" name="good" <c:if test="${topicVo.good==true}">checked</c:if> value="true"> 精华帖？
@@ -94,7 +94,7 @@
     <div class='col-md-3'>
         <div class='panel'>
             <div class='header'>
-                <span class='col_fade'>帖子缩略图</span>
+                <span class='col_fade'>文章缩略圖</span>
             </div>
             <div class='inner'>
                 <style>
@@ -107,8 +107,8 @@
                 <div class="row" id="dropzoneWrapper">
                     <form id="uploadForm" action="" class="dropzone needsclick dz-clickable" id="demo-upload">
                         <div class="dz-message needsclick">
-                            点击或者拖拽上传<br>
-                            <span class="note needsclick">(<strong>文章缩略图</strong>)</span>
+                            点击或者拖拽上傳<br>
+                            <span class="note needsclick">(<strong>文章缩略圖</strong>)</span>
                         </div>
                     </form>
                 </div>
@@ -116,16 +116,17 @@
         </div>
         <div class='panel'>
             <div class='header'>
-                <span class='col_fade'>关于</span>
+                <span class='col_fade'>關於</span>
             </div>
             <div class='inner'>
-                <p>TBlog：tblog开源博客</p>
+                <p>miniBlog: </p>
+                <strong>开源部落格</strong>
 
-                <p>在这里你可以：</p>
+                <p>******：</p>
                 <ul>
-                    <li>提出由建设性的建议</li>
-                    <li>随意修改代码，修改成您需要的风格</li>
-                    <li>分享给您的朋友</li>
+                    <li>>******</li>
+                    <li>>****** >******</li>
+                    <li>>******</li>
                 </ul>
             </div>
         </div>
@@ -134,7 +135,7 @@
 <jsp:include page="../inc/footer.jsp"></jsp:include>
 <script>
 
-    Dropzone.autoDiscover = false;//这个一定要放在最前面，否则
+    Dropzone.autoDiscover = false;//这個一定要放在最前面，否则
 
     $(function() {
 
@@ -168,7 +169,7 @@
     }
 
     /**
-     * 创建Markdown编辑器封装方法
+     * 創建Markdown编辑器封装方法
      * @param divId
      * @param submitId
      * @param markdown
@@ -189,7 +190,7 @@
             sequenceDiagram  : true,
             autoFocus: false,
             path: "${contextPath}/static/js/editormd/lib/",
-            placeholder: "Markdown，提交前请查看预览格式是否正确",
+            placeholder: "Markdown，提交前请查看預覽格式是否正确",
             saveHTMLToTextarea: true,
             imageUpload: true,
             imageFormats: ["jpg", "jpeg", "gif", "png"],

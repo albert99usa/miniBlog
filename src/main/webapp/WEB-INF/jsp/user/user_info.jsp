@@ -10,8 +10,8 @@
         </div>
         <div class="col-md-9">
             <ul class="breadcrumb">
-                <li><a href="${contextPath}/"><i class="glyphicon glyphicon-home"></i> 首页</a></li>
-                <li class="active">个人资料</li>
+                <li><a href="${contextPath}/"><i class="glyphicon glyphicon-home"></i> 首頁</a></li>
+                <li class="active">個人資料</li>
             </ul>
             <div class="wrapper">
                 <jsp:include page="../inc/msgbox.jsp"></jsp:include>
@@ -24,14 +24,14 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="email" class="col-lg-2 control-label">电子邮件</label>
+                        <label for="email" class="col-lg-2 control-label">電子 郵件</label>
                         <div class="col-lg-10">
                             <form:input path="email" cssClass="form-control" id="email"/>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="website" class="col-lg-2 control-label">个人网站</label>
+                        <label for="website" class="col-lg-2 control-label">個人網站</label>
                         <div class="col-lg-10">
                             <form:input path="website" cssClass="form-control" id="website"/>
                         </div>
@@ -52,7 +52,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="selfDesc" class="col-lg-2 control-label">个人简介</label>
+                        <label for="selfDesc" class="col-lg-2 control-label">個人简介</label>
                         <div class="col-lg-10">
                             <form:textarea path="selfDesc" cssClass="form-control"></form:textarea>
                         </div>

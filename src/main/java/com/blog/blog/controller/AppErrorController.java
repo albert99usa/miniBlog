@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
- * 错误处理控制器
+ * 錯誤处理控制器
  * @author tangzhiqiang
  */
 @Controller

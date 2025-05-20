@@ -11,14 +11,14 @@
         </div>
         <div class="col-md-9">
             <ul class="breadcrumb">
-                <li><a href="${contextPath}/"><i class="glyphicon glyphicon-home"></i> 首页</a></li>
+                <li><a href="${contextPath}/"><i class="glyphicon glyphicon-home"></i> 首頁</a></li>
                 <li class="active">修改密码</li>
             </ul>
             <div class="wrapper">
                 <jsp:include page="../inc/msgbox.jsp"></jsp:include>
                 <form:form action="${contextPath}/user/changePwd" cssClass="form-horizontal" modelAttribute="changePwdForm" method="post">
                     <div class="form-group">
-                        <label for="oldPwd" class="col-md-2 control-label">当前密码</label>
+                        <label for="oldPwd" class="col-md-2 control-label">當前密码</label>
                         <div class="col-lg-6">
                             <form:password path="oldPwd" cssClass="form-control" id="oldPwd"/>
                             <form:errors path="oldPwd" cssClass="error"/>

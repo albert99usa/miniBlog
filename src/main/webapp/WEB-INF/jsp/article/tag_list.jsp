@@ -4,8 +4,8 @@
 <div class='container main'>
     <div class='col-md-9'>
         <ul class='breadcrumb'>
-            <li><a href='${contextPath}/'><i class="glyphicon glyphicon-home"></i>主页</a><span class='divider'></span></li>
-            <li><a href='javascript:;'>标签:${tagName}(${pager.totalElements}篇文章)</a><span class='divider'></span></li>
+            <li><a href='${contextPath}/'><i class="glyphicon glyphicon-home"></i>主頁</a><span class='divider'></span></li>
+            <li><a href='javascript:;'>標籤:${tagName}(${pager.totalElements}篇文章)</a><span class='divider'></span></li>
         </ul>
         <div class="panel">
             <div class="inner no-padding">
@@ -21,7 +21,7 @@
                                                 <div class="meta-row">
                                                     <ul class="meta-list">
                                                         <c:if test="${'all'==indexVo.tab and topic.top}">
-                                                            <li class="item recommended">置顶</li>
+                                                            <li class="item recommended">置頂</li>
                                                         </c:if>
                                                         <li class="item username">
                                                             <a href="${contextPath}/pub/user/${topic.authorId}">${topic.authorName}.${topic.friendlyTime}</a>
@@ -75,13 +75,13 @@
                         </c:forEach>
                         </ul>
                     </div>
-                    <!--分页开始-->
+                    <!--分頁开始-->
                     <jsp:include page="../inc/pagination.jsp">
                         <jsp:param name="pager" value="${pager}"/>
                         <jsp:param name="baseURL" value="${contextPath}/tag/${tagName}"/>
                         <jsp:param name="otherParams" value="&keywords=${tagName}"/>
                     </jsp:include>
-                    <!--分页结束-->
+                    <!--分頁结束-->
                 </c:if>
                 <c:if test="${empty pager.content}">
                     <p class="text-center">没有搜索结果</p>

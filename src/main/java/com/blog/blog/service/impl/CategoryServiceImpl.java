@@ -51,7 +51,7 @@ public class CategoryServiceImpl implements CategoryService{
     }
 
     /**
-     * 注意：这里Page的页码是从0开始，所以取值需要传递过来的页码减去1
+     * 注意：这里Page的頁碼是从0开始，所以取值需要傳遞过来的頁碼减去1
      * @param pageNo
      * @param pageSize
      * @return

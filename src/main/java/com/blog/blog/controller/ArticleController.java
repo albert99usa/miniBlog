@@ -59,16 +59,16 @@ public class ArticleController {
                               @RequestParam("editormd-edit-html-code")String contentHTML,
                               RedirectAttributes redirectAttributes){
         if(StringUtils.isEmpty(contentMD)&&StringUtils.isEmpty(contentHTML)){
-            redirectAttributes.addFlashAttribute("messageErr","评论内容不能为空！");
+            redirectAttributes.addFlashAttribute("messageErr","評論内容不能為空！");
             return "redirect:/article/"+topicID;
         }
 
         Reply updatedReply=replyService.updateReplyContent(replyID,contentMD,contentHTML);
         if(null==updatedReply||updatedReply.getId()==null){
-            redirectAttributes.addFlashAttribute("messageErr","评论修改失败！");
+            redirectAttributes.addFlashAttribute("messageErr","評論修改失败！");
             return "redirect:/article/"+topicID;
         }else{
-            redirectAttributes.addFlashAttribute("messageSuc","评论修改成功！");
+            redirectAttributes.addFlashAttribute("messageSuc","評論修改成功！");
             return "redirect:/article/"+topicID;
         }
     }

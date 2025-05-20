@@ -24,7 +24,7 @@ public class UploadUtil {
 	public static final String UPLOAD_AVATAR_FOLDER=UPLOAD_FOLDER+"/avatar";
 
 	/**
-	 * 创建文件，如果文件夹不存在将被创建
+	 * 創建文件，如果文件夹不存在将被創建
 	 * 
 	 * @param destFileName
 	 *            文件路径
@@ -67,7 +67,7 @@ public class UploadUtil {
 	}
 
 	/**
-	 * 保存图片通过url
+	 * 保存圖片通过url
 	 * 
 	 * @param urlString
 	 * @param filename
@@ -97,7 +97,7 @@ public class UploadUtil {
 	}
 
 	/**
-	 * 切割图片
+	 * 切割圖片
 	 * 
 	 * @param input
 	 * @param result
@@ -150,7 +150,7 @@ public class UploadUtil {
 
 
 	/**
-	 * 规范文件名
+	 * 規範文件名
 	 * @param originalFilename
 	 * @return
 	 */
@@ -159,8 +159,8 @@ public class UploadUtil {
 	}
 
 	/**
-	 * 上图文件
-	 * @param rootPath 应用跟路劲
+	 * 上圖文件
+	 * @param rootPath 應用根路劲
 	 * @param relativePath 相对路劲
 	 * @param in  文件流
 	 * @return 全路径

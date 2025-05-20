@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 /**
- * 帖子操作类
+ * 文章操作類
  * @author tangzhiqiang
  */
 @Repository
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Repository;
 public interface TopicRepository extends JpaRepository<Topic,Long> {
 
     /**
-     * 查找指定用户的帖子
+     * 查找指定用户的文章
      * @param authorId
      * @param pageable
      * @return
@@ -23,7 +23,7 @@ public interface TopicRepository extends JpaRepository<Topic,Long> {
     Page<Topic> findByAuthorId(Long authorId, Pageable pageable);
 
     /**
-     * 查找指定用户的帖子
+     * 查找指定用户的文章
      * @param authorName
      * @param pageable
      * @return
@@ -31,7 +31,7 @@ public interface TopicRepository extends JpaRepository<Topic,Long> {
     Page<Topic> findByAuthorName(String authorName, Pageable pageable);
 
     /**
-     * 查找含有指定标签的帖子
+     * 查找含有指定標籤的文章
      * @param tagName
      * @param pageable
      * @return
@@ -39,7 +39,7 @@ public interface TopicRepository extends JpaRepository<Topic,Long> {
     //Page<Topic> findByTagsContains(String tagName, Pageable pageable);
 
     /**
-     * 按栏目分类查找
+     * 按分類分類查找
      * @param catDir
      * @param pageable
      * @return
@@ -47,7 +47,7 @@ public interface TopicRepository extends JpaRepository<Topic,Long> {
     Page<Topic> findByCatDir(String catDir, Pageable pageable);
 
     /**
-     * 标题模糊查询
+     * 標題模糊查询
      * @param title
      * @param pageable
      * @return
@@ -56,7 +56,7 @@ public interface TopicRepository extends JpaRepository<Topic,Long> {
 
 
     /**
-     * 在标题标题或者摘要模糊查询
+     * 在標題標題或者摘要模糊查询
      * @param title
      * @param desc
      * @param pageable
@@ -74,7 +74,7 @@ public interface TopicRepository extends JpaRepository<Topic,Long> {
     Page<Topic> findByCollectedUsersContains(Long userId, Pageable pageable);
 
     /**
-     * 在标题标题或者摘要模糊查询
+     * 在標題標題或者摘要模糊查询
      * @param words 关键字
      * @param page
      * @return

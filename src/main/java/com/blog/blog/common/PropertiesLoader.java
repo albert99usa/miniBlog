@@ -13,7 +13,7 @@ import java.util.NoSuchElementException;
 import java.util.Properties;
 
 /**
- * Properties文件载入工具类. 可载入多个properties文件, 相同的属性在最后载入的文件中的值将会覆盖之前的值，但以System的Property优先.
+ * Properties文件载入工具類. 可载入多個properties文件, 相同的属性在最後载入的文件中的值将会覆盖之前的值，但以System的Property優先.
  * @author tangzhiqiang
  */
 public class PropertiesLoader {
@@ -34,7 +34,7 @@ public class PropertiesLoader {
 
 
     /**
-     * 取出Property，但以System的Property优先,取不到返回空字符串.
+     * 取出Property，但以System的Property優先,取不到返回空字符串.
      *
      * @param key
      * @return
@@ -51,7 +51,7 @@ public class PropertiesLoader {
     }
 
     /**
-     * 取出String类型的Property，但以System的Property优先,如果都为Null则抛出异常.
+     * 取出String類型的Property，但以System的Property優先,如果都為Null则抛出異常.
      *
      * @param key
      * @return
@@ -66,7 +66,7 @@ public class PropertiesLoader {
 
 
     /**
-     * 取出String类型的Property，但以System的Property优先.如果都为Null则返回Default值.
+     * 取出String類型的Property，但以System的Property優先.如果都為Null则返回Default值.
      *
      * @param key
      * @param defaultValue
@@ -78,7 +78,7 @@ public class PropertiesLoader {
     }
 
     /**
-     * 取出Integer类型的Property，但以System的Property优先.如果都为Null或内容错误则抛出异常.
+     * 取出Integer類型的Property，但以System的Property優先.如果都為Null或内容錯誤则抛出異常.
      *
      * @param key
      * @return
@@ -92,7 +92,7 @@ public class PropertiesLoader {
     }
 
     /**
-     * 取出Integer类型的Property，但以System的Property优先.如果都为Null则返回Default值，如果内容错误则抛出异常
+     * 取出Integer類型的Property，但以System的Property優先.如果都為Null则返回Default值，如果内容錯誤则抛出異常
      *
      * @param key
      * @param defaultValue
@@ -104,7 +104,7 @@ public class PropertiesLoader {
     }
 
     /**
-     * 取出Double类型的Property，但以System的Property优先.如果都为Null或内容错误则抛出异常.
+     * 取出Double類型的Property，但以System的Property優先.如果都為Null或内容錯誤则抛出異常.
      *
      * @param key
      * @return
@@ -118,7 +118,7 @@ public class PropertiesLoader {
     }
 
     /**
-     * 取出Double类型的Property，但以System的Property优先.如果都为Null则返回Default值，如果内容错误则抛出异常
+     * 取出Double類型的Property，但以System的Property優先.如果都為Null则返回Default值，如果内容錯誤则抛出異常
      */
     public Double getDouble(String key, Integer defaultValue) {
         String value = getValue(key);
@@ -126,7 +126,7 @@ public class PropertiesLoader {
     }
 
     /**
-     * 取出Boolean类型的Property，但以System的Property优先.如果都为Null抛出异常,如果内容不是true/false则返回false.
+     * 取出Boolean類型的Property，但以System的Property優先.如果都為Null抛出異常,如果内容不是true/false则返回false.
      *
      * @param key
      * @return
@@ -140,7 +140,7 @@ public class PropertiesLoader {
     }
 
     /**
-     * 取出Boolean类型的Property，但以System的Property优先.如果都为Null则返回Default值,如果内容不为true/false则返回false.
+     * 取出Boolean類型的Property，但以System的Property優先.如果都為Null则返回Default值,如果内容不為true/false则返回false.
      *
      * @param key
      * @param defaultValue
@@ -153,7 +153,7 @@ public class PropertiesLoader {
 
 
     /**
-     * 载入多个文件, 文件路径使用Spring Resource格式.
+     * 载入多個文件, 文件路径使用Spring Resource格式.
      *
      * @param resourcesPaths
      * @return

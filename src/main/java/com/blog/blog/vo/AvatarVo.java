@@ -16,7 +16,7 @@ public class AvatarVo {
 
     private String uid;
 
-    @NotEmpty(message = "头像文件不能为空")
+    @NotEmpty(message = "頭像文件不能為空")
     private MultipartFile file;
 
 }

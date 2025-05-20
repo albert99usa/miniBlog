@@ -28,7 +28,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import java.security.Principal;
 
 /**
- * 帖子控制器
+ * 文章控制器
  * @author tangzhiqiang
  */
 @Controller
@@ -46,7 +46,7 @@ public class TopicController {
 
 
     /**
-     * 帖子列表
+     * 文章列表
      * @param model
      * @return
      */
@@ -72,7 +72,7 @@ public class TopicController {
     }
 
     /**
-     * 新增帖子表单
+     * 新增文章表單
      * @return
      */
     @RequestMapping(value="/create",method = RequestMethod.GET)
@@ -85,7 +85,7 @@ public class TopicController {
 
 
     /**
-     * 新增帖子
+     * 新增文章
      * @param vo
      * @param model
      * @param redirectAttributes
@@ -98,7 +98,7 @@ public class TopicController {
         if(null==vo|| StringUtils.isEmpty(vo.getCatId().toString())
                 ||StringUtils.isEmpty(vo.getTitle())
                 ||StringUtils.isEmpty(vo.getContentMD())){
-            model.addAttribute("messageErr","帖子栏目，标题，内容不能为空");
+            model.addAttribute("messageErr","文章分類，標題，内容不能為空");
             model.addAttribute("catList",categoryService.findAll());
             model.addAttribute("topicVo",vo);
             return "topic/topic_add";
@@ -106,10 +106,10 @@ public class TopicController {
 
         Topic savedTopic=topicService.addTopic(vo);
         if(null!=savedTopic&&savedTopic.getId()!=null){
-            redirectAttributes.addFlashAttribute("messageSuc","帖子创建成功");
+            redirectAttributes.addFlashAttribute("messageSuc","文章創建成功");
             return "redirect:/topic/list";
         }else{
-            redirectAttributes.addFlashAttribute("messageErr","帖子创建失败");
+            redirectAttributes.addFlashAttribute("messageErr","文章創建失败");
             model.addAttribute("catList",categoryService.findAll());
             model.addAttribute("topicVo",vo);
             return "topic/topic_add";
@@ -119,7 +119,7 @@ public class TopicController {
 
 
     /**
-     * 修改帖子表单
+     * 修改文章表單
      * @param topicID
      * @param model
      * @return
@@ -133,7 +133,7 @@ public class TopicController {
 
 
     /**
-     * 修改帖子
+     * 修改文章
      * @param vo
      * @param model
      * @param redirectAttributes
@@ -147,17 +147,17 @@ public class TopicController {
         if(null==vo|| StringUtils.isEmpty(vo.getCatId().toString())
                 ||StringUtils.isEmpty(vo.getTitle())
                 ||StringUtils.isEmpty(vo.getContentMD())){
-            model.addAttribute("messageErr","帖子栏目，标题，内容不能为空");
+            model.addAttribute("messageErr","文章分類，標題，内容不能為空");
             model.addAttribute("topicVo",vo);
             return "topic/topic_edit";
         }
 
         Topic savedTopic=topicService.updateById(vo,topicID);
         if(null!=savedTopic&&savedTopic.getId()!=null){
-            redirectAttributes.addFlashAttribute("messageSuc","帖子更新成功");
+            redirectAttributes.addFlashAttribute("messageSuc","文章更新成功");
             return "redirect:/topic/edit/"+savedTopic.getId();
         }else{
-            redirectAttributes.addFlashAttribute("messageErr","帖子更新失败");
+            redirectAttributes.addFlashAttribute("messageErr","文章更新失败");
             model.addAttribute("topicVo",vo);
             return "topic/topic_edit";
         }
@@ -166,14 +166,14 @@ public class TopicController {
 
 
     /**
-     * 删除帖子
+     * 删除文章
      * @param topicID
      * @return
      */
     @RequestMapping(value="/del/{topicID}",method = RequestMethod.GET)
     public String delTopic(@PathVariable("topicID") Long topicID, RedirectAttributes redirectAttributes){
         topicService.deleteById(topicID);
-        redirectAttributes.addFlashAttribute("messageSuc","帖子删除成功");
+        redirectAttributes.addFlashAttribute("messageSuc","文章删除成功");
         return "redirect:/topic/list";
     }
 

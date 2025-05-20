@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 /**
- * 栏目文档操作类
+ * 分類文件操作類
  * @author tangzhiqiang
  */
 @Repository
@@ -15,8 +15,8 @@ import java.util.List;
 public interface CategoryRepository extends JpaRepository<Category,Long> {
 
     /**
-     * 目录名字必须唯一
-     * @param catDir 栏目英文目录名称
+     * 目錄名字必须唯一
+     * @param catDir 分類英文目錄名稱
      * @return
      */
     List<Category> findByCatDir(String catDir);

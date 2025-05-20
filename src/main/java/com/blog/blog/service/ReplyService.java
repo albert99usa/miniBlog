@@ -12,7 +12,7 @@ public interface ReplyService {
 
 
     /**
-     * 取得指定评论内容
+     * 取得指定評論内容
      * @param replyID
      * @return
      */
@@ -20,7 +20,7 @@ public interface ReplyService {
 
 
     /**
-     * 新增评论
+     * 新增評論
      * @param vo
      * @return
      */
@@ -28,7 +28,7 @@ public interface ReplyService {
 
 
     /**
-     * 更新评论内容
+     * 更新評論内容
      * @param replyId
      * @param contentMD
      * @param contentHTML
@@ -38,7 +38,7 @@ public interface ReplyService {
 
 
     /**
-     * 查找指定帖子的评论
+     * 查找指定文章的評論
      * @param topicId
      * @return
      */
@@ -46,7 +46,7 @@ public interface ReplyService {
 
 
     /**
-     * 删除评论
+     * 删除評論
      * @param replyId
      * @param topicId
      */

@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * 评论操作类
+ * 評論操作類
  * @author tangzhiqiang
  */
 @Repository
@@ -16,7 +16,7 @@ import java.util.Optional;
 public interface ReplyRepository extends JpaRepository<Reply,Long> {
 
     /**
-     * 查找文章的所有评论
+     * 查找文章的所有評論
      * @param topicId
      * @return
      */

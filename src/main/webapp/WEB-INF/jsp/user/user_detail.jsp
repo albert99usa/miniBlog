@@ -4,8 +4,8 @@
 <div class='container main'>
     <div class='col-md-9'>
         <ul class='breadcrumb'>
-            <li><a href='${contextPath}/'>主页</a><span class='divider'></span></li>
-            <li class='active'>${user.username}主页</li>
+            <li><a href='${contextPath}/'>主頁</a><span class='divider'></span></li>
+            <li class='active'>${user.username}主頁</li>
         </ul>
         <div class="panel">
             <div class="inner user-info-block">
@@ -45,8 +45,8 @@
         <div class="panel">
             <div class="inner no-padding">
                 <div class="header">
-                    <a href="${contextPath}/pub/user/${user.id}/?tab=new" class='topic-tab <c:if test="${empty tab or tab=='new'}">current-tab</c:if>'>新建帖子</a>
-                    <a href="${contextPath}/pub/user/${user.id}/?tab=collect" class='topic-tab <c:if test="${tab=='collect'}">current-tab</c:if>'>收藏帖子</a>
+                    <a href="${contextPath}/pub/user/${user.id}/?tab=new" class='topic-tab <c:if test="${empty tab or tab=='new'}">current-tab</c:if>'>新建文章</a>
+                    <a href="${contextPath}/pub/user/${user.id}/?tab=collect" class='topic-tab <c:if test="${tab=='collect'}">current-tab</c:if>'>收藏文章</a>
                 </div>
                 <c:if test="${not empty pager.content}">
                     <div class="search-result">
@@ -72,13 +72,13 @@
                             </c:forEach>
                         </ul>
                     </div>
-                    <!--分页开始-->
+                    <!--分頁开始-->
                     <jsp:include page="../inc/pagination.jsp">
                         <jsp:param name="pager" value="${pager}"/>
                         <jsp:param name="baseURL" value="${contextPath}/pub/user/${user.id}"/>
                         <jsp:param name="otherParams" value="&tab=${tab}"/>
                     </jsp:include>
-                    <!--分页结束-->
+                    <!--分頁结束-->
                 </c:if>
                 <c:if test="${empty pager.content}">
                     <p class="text-center">没有搜索结果</p>
