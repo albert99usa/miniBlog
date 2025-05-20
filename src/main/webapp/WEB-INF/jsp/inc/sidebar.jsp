@@ -11,22 +11,5 @@
 
         </div>
     </div>
-    <div class='panel'>
-        <div class='header'>
-            <span class='col_fade'>广告</span>
-        </div>
-        <div class="inner ads">
-            <a href="javascript:;" target="_blank" class="banner">
-                <img src="${contextPath}/static/images/ads/panda-sichuan.jpeg">
-            </a>
-        </div>
-    </div>
-    <div class='panel'>
-        <div class='header'>
-            <span class='col_fade'>推荐社区</span>
-        </div>
-        <div class='inner'>
 
-        </div>
-    </div>
 </div>
