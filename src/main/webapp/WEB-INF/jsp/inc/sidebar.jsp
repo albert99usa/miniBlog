@@ -7,9 +7,7 @@
         <div class='inner'>
             <p>miniBlog：</p>
             <p> 一個簡單的部落格</p>
-
-
         </div>
     </div>
-
+<div> --- </div>
 </div>
