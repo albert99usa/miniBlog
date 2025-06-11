@@ -46,7 +46,7 @@
                             <!--分頁结束-->
                         </c:if>
                         <c:if test="${empty pager.content}">
-                            <p class="text-center">還没有創建文章</p>
+                            <p class="text-center">還沒有創建文章</p>
                         </c:if>
                     </div>
                 </div>

@@ -50,7 +50,7 @@
                                         <div class="input-group-addon">標籤:</div>
                                         <input type="text" name="tags" class="form-control" placeholder="输入標籤" value="${topicVo.tags}">
                                     </div>
-                                    <span class="label-info">注意：標籤使用英文逗号分隔</span>
+                                    <span class="label-info">注意：標籤使用英文逗號分隔</span>
                                 </div>
 
                                 <div class="form-group">
@@ -68,10 +68,10 @@
                                         <input type="checkbox" name="contentIsHTML" value="true"> 是否網頁？
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="top" value="true"> 置頂帖？
+                                        <input type="checkbox" name="top" value="true"> 置頂文章？
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="good" value="true"> 精华帖？
+                                        <input type="checkbox" name="good" value="true"> 精華文章？
                                     </label>
                                 </div>
 
@@ -120,11 +120,11 @@
             <div class='inner'>
                 <p>TBlog：tblog开源部落格</p>
 
-                <p>在这里你可以：</p>
+                <p>在這裡可以：</p>
                 <ul>
-                    <li>提出由建设性的建议</li>
-                    <li>随意修改代码，修改成您需要的风格</li>
-                    <li>分享给您的朋友</li>
+                    <li>*********</li>
+                    <li>*********,*******</li>
+                    <li>*******</li>
                 </ul>
             </div>
         </div>
@@ -133,7 +133,7 @@
 <jsp:include page="../inc/footer.jsp"></jsp:include>
 <script>
 
-    Dropzone.autoDiscover = false;//这個一定要放在最前面，否则
+    Dropzone.autoDiscover = false;// 這個一定要放在最前面
 
     $(function() {
 
@@ -182,7 +182,7 @@
             sequenceDiagram  : true,
             autoFocus: false,
             path: "${contextPath}/static/js/editormd/lib/",
-            placeholder: "Markdown，提交前请查看預覽格式是否正确",
+            placeholder: "Markdown，提交前請看預覽格式是否正確",
             saveHTMLToTextarea: true,
             imageUpload: true,
             imageFormats: ["jpg", "jpeg", "gif", "png"],

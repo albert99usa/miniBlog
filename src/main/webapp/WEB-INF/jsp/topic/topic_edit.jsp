@@ -50,7 +50,7 @@
                                         <div class="input-group-addon">標籤:</div>
                                         <input type="text" name="tags" class="form-control" placeholder="输入標籤" value="${topicVo.tags}">
                                     </div>
-                                    <span class="label-info">注意：標籤使用英文逗号分隔</span>
+                                    <span class="label-info">注意：標籤使用英文逗號分隔</span>
                                 </div>
 
                                 <div class="form-group">
@@ -68,10 +68,10 @@
                                         <input type="checkbox" name="contentIsHTML" <c:if test="${topicVo.contentIsHTML==true}">checked</c:if> value="true"> 是否網頁？
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="top" <c:if test="${topicVo.top==true}">checked</c:if> value="true"> 置頂帖？
+                                        <input type="checkbox" name="top" <c:if test="${topicVo.top==true}">checked</c:if> value="true"> 置頂文章？
                                     </label>
                                     <label>
-                                        <input type="checkbox" name="good" <c:if test="${topicVo.good==true}">checked</c:if> value="true"> 精华帖？
+                                        <input type="checkbox" name="good" <c:if test="${topicVo.good==true}">checked</c:if> value="true"> 精華文章？
                                     </label>
                                 </div>
 
@@ -107,7 +107,7 @@
                 <div class="row" id="dropzoneWrapper">
                     <form id="uploadForm" action="" class="dropzone needsclick dz-clickable" id="demo-upload">
                         <div class="dz-message needsclick">
-                            点击或者拖拽上傳<br>
+                            點擊或者拖曳上傳<br>
                             <span class="note needsclick">(<strong>文章缩略圖</strong>)</span>
                         </div>
                     </form>
@@ -120,7 +120,7 @@
             </div>
             <div class='inner'>
                 <p>miniBlog: </p>
-                <strong>开源部落格</strong>
+                <strong>個人迷你部落格</strong>
 
                 <p>******：</p>
                 <ul>

@@ -40,13 +40,13 @@
                             <c:when test="${article.topic.likedUsers.contains(loginUser.id)}">
                                 <a href="${contextPath}/like/remove/${article.topic.id}" class="action-link">
                                     <img src="${contextPath}/static/images/ico/liked-lg.svg" alt="">
-                                    <span>取消喜欢</span>
+                                    <span>取消喜歡</span>
                                 </a>
                             </c:when>
                             <c:otherwise>
                                 <a href="${contextPath}/like/add/${article.topic.id}" class="action-link">
                                     <img src="${contextPath}/static/images/ico/like-lg.svg" alt="">
-                                    <span>喜欢</span>
+                                    <span>喜歡</span>
                                 </a>
                             </c:otherwise>
                         </c:choose>

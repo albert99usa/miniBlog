@@ -5,7 +5,7 @@
     <div class='col-md-9'>
         <ul class='breadcrumb'>
             <li><a href='${contextPath}/'><i class="glyphicon glyphicon-home"></i>主頁</a><span class='divider'></span></li>
-            <li><a href='javascript:;'>搜索结果</a><span class='divider'></span></li>
+            <li><a href='javascript:;'>搜尋結果</a><span class='divider'></span></li>
         </ul>
 
         <div class="panel">
@@ -14,7 +14,7 @@
                     <div class="input-group">
                         <input type="text" name="keywords" class="form-control" value="${searchVo.keywords}">
                         <span class="input-group-btn">
-                            <button type="submit" class="btn btn-primary">搜索</button>
+                            <button type="submit" class="btn btn-primary">搜尋</button>
                         </span>
                     </div>
                 </form>

@@ -84,7 +84,7 @@
                     <!--分頁结束-->
                 </c:if>
                 <c:if test="${empty pager.content}">
-                    <p class="text-center">没有搜索结果</p>
+                    <p class="text-center">没有搜尋结果</p>
                 </c:if>
             </div>
         </div>
